@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import FeaturedSection from './components/FeaturedSection';
+import CollectionSection from './components/CollectionSection';
+import AboutSection from './components/AboutSection';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <HeroSection />;
+      case 'featured':
+        return <FeaturedSection />;
+      case 'collections':
+        return <CollectionSection />;
+      case 'about':
+        return <AboutSection />;
+      default:
+        return <HeroSection />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto p-4">
+      <Navbar setCurrentPage={setCurrentPage} />
+      {renderPage()}
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
