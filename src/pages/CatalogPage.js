@@ -11,18 +11,11 @@ const CatalogPage = () => {
     setIsVisible(true);
   }, []);
 
-  const categories = [
-    { id: 'all', name: 'Todo', count: 69 },
-    { id: 'chairs', name: 'Sillas', count: 24 },
-    { id: 'tables', name: 'Mesas', count: 18 },
-    { id: 'sofas', name: 'Sofás', count: 12 },
-    { id: 'storage', name: 'Almacenamiento', count: 15 }
-  ];
-
   const products = [
+    // Chairs
     {
       id: 1,
-      name: 'Silla Moderna Ergonómica',
+      name: 'Modern Ergonomic Office Chair',
       category: 'chairs',
       price: 299,
       originalPrice: 399,
@@ -32,17 +25,109 @@ const CatalogPage = () => {
     },
     {
       id: 2,
-      name: 'Mesa de Comedor Roble',
+      name: 'Premium Executive Chair',
+      category: 'chairs',
+      price: 449,
+      originalPrice: 599,
+      image: 'https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=300&h=300&fit=crop',
+      badge: 'Popular',
+      badgeColor: 'bg-purple-500'
+    },
+    {
+      id: 3,
+      name: 'Scandinavian Dining Chair',
+      category: 'chairs',
+      price: 129,
+      originalPrice: 169,
+      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop',
+      badge: '-24%',
+      badgeColor: 'bg-red-500'
+    },
+    {
+      id: 4,
+      name: 'Vintage Leather Armchair',
+      category: 'chairs',
+      price: 699,
+      originalPrice: 899,
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop',
+      badge: 'Limited',
+      badgeColor: 'bg-amber-600'
+    },
+    {
+      id: 5,
+      name: 'Gaming Chair Pro',
+      category: 'chairs',
+      price: 349,
+      originalPrice: 449,
+      image: 'https://images.unsplash.com/photo-1592078615290-033ee584e267?w=300&h=300&fit=crop',
+      badge: 'New',
+      badgeColor: 'bg-blue-500'
+    },
+    {
+      id: 6,
+      name: 'Minimalist Accent Chair',
+      category: 'chairs',
+      price: 199,
+      originalPrice: 249,
+      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=300&fit=crop',
+      badge: 'Eco',
+      badgeColor: 'bg-green-600'
+    },
+    // Tables
+    {
+      id: 7,
+      name: 'Oak Dining Table',
       category: 'tables',
       price: 899,
       originalPrice: 1199,
       image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop',
-      badge: 'Nuevo',
+      badge: 'New',
       badgeColor: 'bg-blue-500'
     },
     {
-      id: 3,
-      name: 'Sofá Minimalista 3 Plazas',
+      id: 8,
+      name: 'Nordic Side Table',
+      category: 'tables',
+      price: 199,
+      originalPrice: 249,
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop',
+      badge: 'Eco',
+      badgeColor: 'bg-green-600'
+    },
+    {
+      id: 9,
+      name: 'Glass Coffee Table',
+      category: 'tables',
+      price: 449,
+      originalPrice: 599,
+      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop',
+      badge: 'Modern',
+      badgeColor: 'bg-indigo-500'
+    },
+    {
+      id: 10,
+      name: 'Industrial Desk',
+      category: 'tables',
+      price: 329,
+      originalPrice: 429,
+      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop',
+      badge: 'Sale',
+      badgeColor: 'bg-red-500'
+    },
+    {
+      id: 11,
+      name: 'Marble Console Table',
+      category: 'tables',
+      price: 799,
+      originalPrice: 999,
+      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=300&fit=crop',
+      badge: 'Luxury',
+      badgeColor: 'bg-purple-600'
+    },
+    // Sofas
+    {
+      id: 12,
+      name: 'Minimalist 3-Seat Sofa',
       category: 'sofas',
       price: 1299,
       originalPrice: 1599,
@@ -51,35 +136,204 @@ const CatalogPage = () => {
       badgeColor: 'bg-red-500'
     },
     {
-      id: 4,
-      name: 'Estantería Industrial',
-      category: 'storage',
-      price: 549,
-      originalPrice: 699,
+      id: 13,
+      name: 'L-Shaped Sectional',
+      category: 'sofas',
+      price: 1899,
+      originalPrice: 2399,
       image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop',
-      badge: 'Oferta',
-      badgeColor: 'bg-orange-500'
-    },
-    {
-      id: 5,
-      name: 'Silla de Oficina Premium',
-      category: 'chairs',
-      price: 449,
-      originalPrice: 599,
-      image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=300&h=300&fit=crop',
       badge: 'Popular',
       badgeColor: 'bg-purple-500'
     },
     {
-      id: 6,
-      name: 'Mesa Lateral Nórdica',
-      category: 'tables',
+      id: 14,
+      name: 'Velvet Loveseat',
+      category: 'sofas',
+      price: 799,
+      originalPrice: 999,
+      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop',
+      badge: 'Luxury',
+      badgeColor: 'bg-amber-600'
+    },
+    {
+      id: 15,
+      name: 'Reclining Sofa',
+      category: 'sofas',
+      price: 1599,
+      originalPrice: 1999,
+      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=300&fit=crop',
+      badge: 'Comfort',
+      badgeColor: 'bg-blue-600'
+    },
+    // Storage
+    {
+      id: 16,
+      name: 'Industrial Bookshelf',
+      category: 'storage',
+      price: 549,
+      originalPrice: 699,
+      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop',
+      badge: 'Sale',
+      badgeColor: 'bg-orange-500'
+    },
+    {
+      id: 17,
+      name: 'Modular Storage Unit',
+      category: 'storage',
+      price: 399,
+      originalPrice: 499,
+      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop',
+      badge: 'Versatile',
+      badgeColor: 'bg-green-500'
+    },
+    {
+      id: 18,
+      name: 'Floating Wall Shelves',
+      category: 'storage',
+      price: 89,
+      originalPrice: 119,
+      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=300&fit=crop',
+      badge: 'Space-Saver',
+      badgeColor: 'bg-blue-500'
+    },
+    {
+      id: 19,
+      name: 'Wooden Storage Cabinet',
+      category: 'storage',
+      price: 329,
+      originalPrice: 429,
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop',
+      badge: 'Classic',
+      badgeColor: 'bg-brown-600'
+    },
+    {
+      id: 20,
+      name: 'Media Console',
+      category: 'storage',
+      price: 449,
+      originalPrice: 599,
+      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop',
+      badge: 'Modern',
+      badgeColor: 'bg-indigo-500'
+    },
+    {
+      id: 21,
+      name: 'Walk-in Wardrobe System',
+      category: 'storage',
+      price: 1299,
+      originalPrice: 1699,
+      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop',
+      badge: 'Premium',
+      badgeColor: 'bg-purple-600'
+    },
+    // Lighting
+    {
+      id: 22,
+      name: 'Modern Floor Lamp',
+      category: 'lighting',
+      price: 179,
+      originalPrice: 229,
+      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=300&fit=crop',
+      badge: 'Stylish',
+      badgeColor: 'bg-yellow-500'
+    },
+    {
+      id: 23,
+      name: 'Crystal Chandelier',
+      category: 'lighting',
+      price: 899,
+      originalPrice: 1199,
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop',
+      badge: 'Elegant',
+      badgeColor: 'bg-purple-600'
+    },
+    {
+      id: 24,
+      name: 'Industrial Pendant Light',
+      category: 'lighting',
+      price: 149,
+      originalPrice: 199,
+      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop',
+      badge: 'Trendy',
+      badgeColor: 'bg-gray-600'
+    },
+    {
+      id: 25,
+      name: 'LED Desk Lamp',
+      category: 'lighting',
+      price: 79,
+      originalPrice: 99,
+      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop',
+      badge: 'Energy-Efficient',
+      badgeColor: 'bg-green-500'
+    },
+    // Decor
+    {
+      id: 26,
+      name: 'Abstract Wall Art Set',
+      category: 'decor',
       price: 199,
       originalPrice: 249,
+      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=300&fit=crop',
+      badge: 'Artistic',
+      badgeColor: 'bg-pink-500'
+    },
+    {
+      id: 27,
+      name: 'Decorative Mirrors',
+      category: 'decor',
+      price: 129,
+      originalPrice: 169,
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop',
+      badge: 'Elegant',
+      badgeColor: 'bg-blue-500'
+    },
+    {
+      id: 28,
+      name: 'Indoor Plant Collection',
+      category: 'decor',
+      price: 89,
+      originalPrice: 119,
       image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop',
-      badge: 'Eco',
+      badge: 'Fresh',
       badgeColor: 'bg-green-600'
+    },
+    {
+      id: 29,
+      name: 'Luxury Throw Pillows',
+      category: 'decor',
+      price: 59,
+      originalPrice: 79,
+      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop',
+      badge: 'Comfort',
+      badgeColor: 'bg-orange-500'
+    },
+    {
+      id: 30,
+      name: 'Ceramic Vase Set',
+      category: 'decor',
+      price: 99,
+      originalPrice: 129,
+      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=300&h=300&fit=crop',
+      badge: 'Handmade',
+      badgeColor: 'bg-amber-600'
     }
+  ];
+
+  // Calculate actual category counts
+  const getCategoryCount = (categoryId) => {
+    if (categoryId === 'all') return products.length;
+    return products.filter(product => product.category === categoryId).length;
+  };
+
+  const categories = [
+    { id: 'all', name: 'All', count: getCategoryCount('all') },
+    { id: 'chairs', name: 'Chairs', count: getCategoryCount('chairs') },
+    { id: 'tables', name: 'Tables', count: getCategoryCount('tables') },
+    { id: 'sofas', name: 'Sofas', count: getCategoryCount('sofas') },
+    { id: 'storage', name: 'Storage', count: getCategoryCount('storage') },
+    { id: 'lighting', name: 'Lighting', count: getCategoryCount('lighting') },
+    { id: 'decor', name: 'Decor', count: getCategoryCount('decor') }
   ];
 
   const filteredProducts = products.filter(product => {
@@ -94,9 +348,9 @@ const CatalogPage = () => {
       <div className="mb-8">
         <div className="flex items-center space-x-3 mb-4">
           <Package className="text-amber-600" size={32} />
-          <h1 className="text-4xl font-bold text-gray-800">Catálogo</h1>
+          <h1 className="text-4xl font-bold text-gray-800">Product Catalog</h1>
         </div>
-        <p className="text-gray-600 text-lg">Descubre nuestra colección completa de muebles de alta calidad</p>
+        <p className="text-gray-600 text-lg">Discover our complete collection of high-quality furniture and home decor</p>
       </div>
 
       {/* Search and Filter Bar */}
@@ -107,7 +361,7 @@ const CatalogPage = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
             <input
               type="text"
-              placeholder="Buscar productos..."
+              placeholder="Search products..."
               className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -144,7 +398,7 @@ const CatalogPage = () => {
             className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
-            style={{ transitionDelay: `${index * 100}ms` }}
+            style={{ transitionDelay: `${index * 50}ms` }}
             onMouseEnter={() => setHoveredProduct(product.id)}
             onMouseLeave={() => setHoveredProduct(null)}
           >
@@ -193,7 +447,7 @@ const CatalogPage = () => {
 
               <button className="group w-full bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg flex items-center justify-center space-x-2">
                 <ShoppingCart size={18} className="group-hover:scale-110 transition-transform duration-300" />
-                <span>Agregar al carrito</span>
+                <span>Add to Cart</span>
               </button>
             </div>
           </div>
@@ -204,8 +458,8 @@ const CatalogPage = () => {
       {filteredProducts.length === 0 && (
         <div className="text-center py-12">
           <Package className="mx-auto text-gray-400 mb-4" size={64} />
-          <h3 className="text-xl font-semibold text-gray-600 mb-2">No se encontraron productos</h3>
-          <p className="text-gray-500">Intenta ajustar tus filtros o término de búsqueda</p>
+          <h3 className="text-xl font-semibold text-gray-600 mb-2">No products found</h3>
+          <p className="text-gray-500">Try adjusting your filters or search term</p>
         </div>
       )}
     </div>
